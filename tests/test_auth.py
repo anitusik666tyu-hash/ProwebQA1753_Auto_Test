@@ -5,6 +5,19 @@ from selenium.common.exceptions import TimeoutException
 from pages.auth_page import AuthPage
 from pages.home_page import HomePage
 # from pages.video_page import VideoPage
+from selenium import webdriver
+from selenium.webdriver.chrome.service import Service
+from webdriver_manager.chrome import ChromeDriverManager
+from selenium.webdriver.chrome.options import Options
+
+options = Options()
+options.add_argument("==no-sandbox")
+options.add_argument("--disable-dev-shm-usage")
+
+driver = webdriver.Chrome(
+    service = Service(ChromeDriverManager().install()),
+    options = options
+)
 
 
 def test_auth_chrome(driver_chrome):
