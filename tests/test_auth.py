@@ -4,6 +4,8 @@ from time import sleep
 from selenium.common.exceptions import TimeoutException
 from pages.auth_page import AuthPage
 from pages.home_page import HomePage
+from selenium.webdriver.chrome.service import Servise
+from webdriver_manager.chrome import ChromeDriverManager
 # from pages.video_page import VideoPage
 
 
